@@ -107,7 +107,7 @@ function FormAdvertisingPage({ data }) {
           setForm={setForm}
         />
       ))}
-      <div className="flex gap-8">
+      <div className="grid grid-cols-4 sm:grid-cols-2 lg:flex gap-1 sm:gap-3">
         {Object.keys(categoryList).map((item, index) => (
           <RadioButton
             key={index}

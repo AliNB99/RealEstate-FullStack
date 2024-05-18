@@ -17,7 +17,9 @@ function Header() {
       <div className="flex gap-3">
         {session.status === "authenticated" ? (
           <Link
-            className="flex items-center gap-2 border-2 py-2 px-4 rounded-full hover:shadow-sm hover:shadow-cyan-50 transition-all"
+            className={`${
+              session ? "hidden" : "flex"
+            } sm:flex items-center gap-2 border-2 py-2 px-4 rounded-full hover:shadow-sm hover:shadow-cyan-50 transition-all`}
             href="/dashboard"
           >
             <FaUser size={20} />

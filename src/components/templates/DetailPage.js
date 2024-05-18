@@ -24,7 +24,7 @@ function DetailPage({ data }) {
     constructionDate,
   } = data;
   return (
-    <div className="flex gap-10">
+    <div className="flex flex-col sm:flex-row gap-10">
       <div className="space-y-8 flex-grow">
         <div className="space-y-2">
           <h1 className="text-blue-600 text-2xl font-semibold">{title}</h1>
