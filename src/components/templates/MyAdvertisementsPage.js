@@ -29,11 +29,9 @@ async function MyAdvertisementsPage() {
   return (
     <div className="space-y-8">
       {!user.myAdvertisements.length ? (
-        <MainTitle
-         
-          bgColor="bg-blue-100"
-          color="text-blue-500"
-        >هیچ آگهی ثبت نکرده اید!!</MainTitle>
+        <MainTitle bgColor="bg-blue-100" color="text-blue-500">
+          هیچ آگهی ثبت نکرده اید!!
+        </MainTitle>
       ) : (
         <div className="space-y-6">
           <MainTitle bgColor="bg-blue-100" color="text-blue-500">

@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="flex flex-col lg:flex-row gap-8 lg:gap-20 justify-between bg-blue-500 text-white mx-4 mb-2 mt-16 p-5 rounded-md">
+    <footer className="flex flex-col lg:flex-row gap-8 lg:gap-20 justify-between bg-blue-500 text-white mx-4 mb-16 sm:mb-2 mt-16 p-5 rounded-md">
       <div className="space-y-4">
         <h3 className="text-2xl font-semibold">سامانه خرید و اجاره ملک</h3>
         <p className="text-justify">

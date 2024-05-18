@@ -15,7 +15,7 @@ function Card({ data }) {
         <h1 className="text-lg font-medium">{title}</h1>
         <div className="flex gap-1 text-zinc-400">
           <HiOutlineLocationMarker />
-          <span>{location}</span>
+          <span className="text-sm md:text-base">{location}</span>
         </div>
         <span className="font-medium">
           {sp(price)}

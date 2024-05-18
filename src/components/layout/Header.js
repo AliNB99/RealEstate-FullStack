@@ -4,7 +4,6 @@ import Link from "next/link";
 import { MdLogin } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import { useSession } from "next-auth/react";
-import DashboardSidebar from "@/templates/DashboardSidebar";
 
 function Header() {
   const session = useSession();
@@ -18,11 +17,10 @@ function Header() {
       <div className="flex gap-3">
         {session.status === "authenticated" ? (
           <Link
-            className="flex items-center gap-2 border-2 py-1 px-3 rounded-lg hover:shadow-sm hover:shadow-cyan-50 transition-all"
+            className="flex items-center gap-2 border-2 py-2 px-4 rounded-full hover:shadow-sm hover:shadow-cyan-50 transition-all"
             href="/dashboard"
           >
             <FaUser size={20} />
-            حساب کاربری
           </Link>
         ) : (
           <Link

@@ -5,7 +5,7 @@ import Sidebar from "@/modules/Sidebar";
 async function AllAdvertisementsPage({ data, category }) {
   return (
     <div>
-      <div className="flex gap-8">
+      <div className="flex relative gap-8">
         <Sidebar category={category} />
 
         {!data.length ? (
@@ -13,7 +13,7 @@ async function AllAdvertisementsPage({ data, category }) {
             هیچ آگهی پیدا نشد!!
           </MainTitle>
         ) : (
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="mt-20 md:mt-0 w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.map((i, index) => (
               <Card key={index} data={i} />
             ))}
