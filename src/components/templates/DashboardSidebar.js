@@ -5,19 +5,11 @@ import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import DesktopDashboardSidebar from "@/modules/DesktopDashboardSidebar";
 import MobileDesktopDashboard from "@/modules/MobileDesktopDashboard";
-import { useEffect, useState } from "react";
+import { findUrlRole } from "src/helper/findUrlRole";
 
 function DashboardSidebar({ children, email, role }) {
   const router = useRouter();
-
-  const [url, setUrl] = useState();
-  useEffect(() => {
-    setUrl(
-      window.location.pathname
-        .split("/")
-        .find((i) => i === "dashboard" || i === "admin")
-    );
-  }, [url]);
+  const url = findUrlRole();
 
   const deleteHandler = () => {
     router.push("/");

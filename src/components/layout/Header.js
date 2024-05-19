@@ -4,9 +4,11 @@ import Link from "next/link";
 import { MdLogin } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import { useSession } from "next-auth/react";
+import { findUrlRole } from "src/helper/findUrlRole";
 
 function Header() {
   const session = useSession();
+  const url = findUrlRole();
 
   return (
     <header className="bg-blue-500 text-white flex items-center justify-between h-14 px-5 rounded-md my-2 mx-4">
@@ -18,8 +20,8 @@ function Header() {
         {session.status === "authenticated" ? (
           <Link
             className={`${
-              session ? "hidden" : "flex"
-            } sm:flex items-center gap-2 border-2 py-2 px-4 rounded-full hover:shadow-sm hover:shadow-cyan-50 transition-all`}
+              url ? "hidden" : "flex"
+            } md:flex items-center gap-2 border-2 py-2 px-4 rounded-full hover:shadow-sm hover:shadow-cyan-50 transition-all`}
             href="/dashboard"
           >
             <FaUser size={20} />
