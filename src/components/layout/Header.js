@@ -4,11 +4,11 @@ import Link from "next/link";
 import { MdLogin } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import { useSession } from "next-auth/react";
-import FindUrlRole from "@/helper/FindUrlRole";
+import findUrlRole from "@/helper/FindUrlRole";
 
 function Header() {
   const session = useSession();
-  const url = FindUrlRole();
+  const url = findUrlRole();
 
   return (
     <header className="bg-blue-500 text-white flex items-center justify-between h-14 px-5 rounded-md my-2 mx-4">
