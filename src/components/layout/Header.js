@@ -4,7 +4,7 @@ import Link from "next/link";
 import { MdLogin } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import { useSession } from "next-auth/react";
-import FindUrlRole from "src/helper/FindUrlRole";
+import FindUrlRole from "@/helper/FindUrlRole";
 
 function Header() {
   const session = useSession();

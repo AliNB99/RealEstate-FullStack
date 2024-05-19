@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import DesktopDashboardSidebar from "@/modules/DesktopDashboardSidebar";
 import MobileDesktopDashboard from "@/modules/MobileDesktopDashboard";
-import FindUrlRole from "src/helper/FindUrlRole";
+import FindUrlRole from "@/helper/FindUrlRole";
 
 function DashboardSidebar({ children, email, role }) {
   const router = useRouter();

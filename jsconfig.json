@@ -12,7 +12,8 @@
       "@/elements/*": ["src/components/elements/*"],
       "@/providers/*": ["src/providers/*"],
       "@/api/*": ["src/app/api/*"],
-      "@/constants/*": ["src/constants/*"]
+      "@/constants/*": ["src/constants/*"],
+      "@/helper/*": ["src/helper/*"]
     }
   }
 }
