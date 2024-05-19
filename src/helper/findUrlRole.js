@@ -1,7 +1,7 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export function findUrlRole() {
+function FindUrlRole() {
   const [url, setUrl] = useState();
   const pathname = usePathname();
   useEffect(() => {
@@ -10,3 +10,4 @@ export function findUrlRole() {
 
   return url;
 }
+export default FindUrlRole();
