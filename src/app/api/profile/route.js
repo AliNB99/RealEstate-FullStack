@@ -65,6 +65,8 @@ export async function POST(req) {
       userId: new Types.ObjectId(user._id),
     });
 
+    console.log(newProfile);
+
     return NextResponse.json({
       message: "آگهی جدید اضافه شد",
       status: 201,
