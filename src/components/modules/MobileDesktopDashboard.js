@@ -7,7 +7,7 @@ import { HiOutlineUserCircle } from "react-icons/hi2";
 
 function MobileDesktopDashboard({ role, deleteHandler }) {
   return (
-    <sidebar className="z-50 flex sm:hidden justify-center shadow-normal fixed left-0 bottom-0 w-full p-1 bg-white">
+    <sidebar className="z-50 flex sm:hidden justify-center shadow-normal fixed left-0 bottom-0 w-full p-4 bg-white">
       <div
         className={`w-full grid ${
           role === "ADMIN" ? "grid-cols-5" : "grid-cols-4"

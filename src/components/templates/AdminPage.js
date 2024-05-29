@@ -5,7 +5,7 @@ async function AdminPage({ advertisements, role }) {
   return (
     <div>
       {!advertisements.length ? (
-        <MainTitle bgColor="bg-blue-100" color="text-blue-500">
+        <MainTitle bgColor="bg-red-100" color="text-red-500">
           هیچ آگهی در انتظار تایید نیست!!
         </MainTitle>
       ) : (

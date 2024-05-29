@@ -1,30 +1,9 @@
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import User from "@/models/User";
-import connectDB from "@/utils/connectDB";
-import { getServerSession } from "next-auth";
 import React from "react";
 import CardDashboard from "@/modules/CardDashboard";
 import MainTitle from "@/elements/MainTitle";
 
-async function MyAdvertisementsPage() {
-  await connectDB();
-  const {
-    user: { email },
-  } = await getServerSession(authOptions);
-
-  const [user] = await User.aggregate([
-    {
-      $match: { email },
-    },
-    {
-      $lookup: {
-        from: "profiles",
-        foreignField: "userId",
-        localField: "_id",
-        as: "myAdvertisements",
-      },
-    },
-  ]);
+async function MyAdvertisementsPage({user}) {
+  
 
   return (
     <div className="space-y-8">

@@ -68,7 +68,6 @@ export async function POST(req) {
     return NextResponse.json({
       message: "آگهی جدید اضافه شد",
       status: 201,
-      data: newProfile,
     });
   } catch (err) {
     console.log(err);

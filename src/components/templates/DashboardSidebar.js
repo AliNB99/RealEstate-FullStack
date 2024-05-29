@@ -1,11 +1,11 @@
 "use client";
 
-import { signOut } from "next-auth/react";
 import toast from "react-hot-toast";
+import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import PathNameRole from "@/helper/PathNameRole";
 import DesktopDashboardSidebar from "@/modules/DesktopDashboardSidebar";
 import MobileDesktopDashboard from "@/modules/MobileDesktopDashboard";
-import PathNameRole from "@/helper/PathNameRole";
 
 function DashboardSidebar({ children, email, role }) {
   const router = useRouter();

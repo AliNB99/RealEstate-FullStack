@@ -5,6 +5,10 @@ import DashboardSidebar from "@/templates/DashboardSidebar";
 import { authOptions } from "../api/auth/[...nextauth]/route";
 import User from "@/models/User";
 
+export const metadata = {
+  title: "پنل کاربری | املاک",
+};
+
 async function layout({ children }) {
   const session = await getServerSession(authOptions);
   if (!session) {

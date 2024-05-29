@@ -5,8 +5,14 @@ import DashboardSidebar from "@/templates/DashboardSidebar";
 import AdminPage from "@/templates/AdminPage";
 import Profile from "@/models/Profile";
 import { redirect } from "next/dist/server/api-utils";
+import connectDB from "@/utils/connectDB";
+
+export const metadata = {
+  title: "پنل ادمین | املاک",
+};
 
 async function Admin() {
+  await connectDB();
   const session = await getServerSession(authOptions);
   if (!session) redirect("/signin");
 
